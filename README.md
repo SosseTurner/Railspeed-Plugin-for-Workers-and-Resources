@@ -4,8 +4,6 @@ A [TesmioLoader](https://github.com/MaxLegend/TesmioLoader) plugin for **Workers
 
 Concrete track is capped at 150 km/h, and no game file exposes that number. Give a locomotive a higher `$ENGINE_SPEED` and it still refuses to pass 150. This plugin lifts that ceiling, along with the bridge and tunnel tiers, to whatever you put in a config file.
 
-![preview](railspeed_preview.png)
-
 ---
 
 ## What it changes
