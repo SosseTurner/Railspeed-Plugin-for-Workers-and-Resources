@@ -16,9 +16,9 @@ Every infrastructure speed limit in the game comes out of a single lookup functi
 |---|---|---|
 | 150 km/h | concrete rail | `speed_concrete` |
 | 120 km/h | tunnels, and one bridge type | `speed_120` |
-| 121 km/h | bridge / tunnel tier | `speed_121` |
-| 135 km/h | bridge / tunnel tier | `speed_135` |
-| 140 km/h | bridge / tunnel tier | `speed_140` |
+| 121 km/h | bridge tier | `speed_121` |
+| 135 km/h | bridge tier | `speed_135` |
+| 140 km/h | bridge tier | `speed_140` |
 | 70 km/h | wood rail | `speed_wood` |
 
 By default the single `speed` key drives everything **except wood rail**, which is left at its stock 70 — the two track tiers exist so the cheap one is slower, and raising it removes any reason to build concrete. Set `speed_wood` explicitly if you disagree.
@@ -36,7 +36,7 @@ Every patch site is verified against the exact bytes 1.1.1.7 ships, *before* any
 
 ## Install
 
-1. Copy `railspeed.dll` and `railspeed.ini` into TesmioLoader's `plugins\` folder.
+1. Copy plugin folder contents into TesmioLoader's `plugins\` folder.
 2. Open `railspeed.ini` and set the speed you want.
 3. Launch through the TesmioLoader launcher as usual.
 
@@ -145,8 +145,6 @@ The plugin is built `/MT`, like the loader and every other plugin — each has i
 ## License
 
 GPLv3, the same as TesmioLoader, which this plugin includes headers from and is therefore a derivative work of. See [`LICENSE`](LICENSE) for the full text.
-
-The preview image is not derived from any TesmioLoader code and is licensed separately: *(state your terms here — e.g. CC BY-SA 4.0)*.
 
 No game code or assets are redistributed here. Addresses and byte patterns documented in the source are factual observations about a binary you must already own.
 
