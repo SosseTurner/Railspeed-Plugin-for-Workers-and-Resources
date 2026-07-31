@@ -150,4 +150,4 @@ No game code or assets are redistributed here. Addresses and byte patterns docum
 
 ## Credits
 
-Built on [TesmioLoader](https://github.com/MaxLegend/TesmioLoader), which does all the hard work of getting code into the process in the first place. The addresses were found by reverse-engineering `SOVIET64.exe` 1.1.1.7 with Ghidra and Cheat Engine.
+Built on [TesmioLoader](https://github.com/MaxLegend/TesmioLoader), which does all the hard work of getting code into the process in the first place. The addresses were found by reverse-engineering `SOVIET64.exe` 1.1.1.7 with Ghidra and Cheat Engine, also using Claude AI (Opus 5 model).
