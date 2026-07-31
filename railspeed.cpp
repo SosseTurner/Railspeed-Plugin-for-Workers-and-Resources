@@ -17,9 +17,9 @@
 // process can observe the change. That is technique 3 in docs/01-architecture:
 // a data reference rewrite, no trampoline, no stolen bytes.
 //
-// The effective cap a train obeys is min(vehicle max speed, track limit), so
-// raising a track limit does nothing until the locomotive's $ENGINE_SPEED
-// clears it too.
+// The effective cap a train obeys is min(locomotive top speed, track limit),
+// so raising a track limit does nothing until the locomotive's $ENGINE_SPEED
+// clears it too. Wagons do not appear to constrain the train in practice.
 
 #include "../../src/tesmio_plugin.h"
 
