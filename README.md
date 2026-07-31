@@ -13,10 +13,10 @@ Every infrastructure speed limit in the game comes out of a single lookup functi
 | Stock limit | What uses it | Config key |
 |---|---|---|
 | 150 km/h | concrete rail | `speed_concrete` |
-| 120 km/h | tunnels, and one bridge type | `speed_120` |
-| 121 km/h | bridge tier | `speed_121` |
-| 135 km/h | bridge tier | `speed_135` |
-| 140 km/h | bridge tier | `speed_140` |
+| 120 km/h | tunnels, and 39m bridge | `speed_120` |
+| 121 km/h | 23m bridge | `speed_121` |
+| 135 km/h | 58m bridge | `speed_135` |
+| 140 km/h | 38m bridge | `speed_140` |
 | 70 km/h | wood rail | `speed_wood` |
 
 By default the single `speed` key drives everything **except wood rail**, which is left at its stock 70 — the two track tiers exist so the cheap one is slower, and raising it removes any reason to build concrete. Set `speed_wood` explicitly if you disagree.
