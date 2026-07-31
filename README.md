@@ -41,7 +41,7 @@ Every patch site is verified against the exact bytes 1.1.1.7 ships, *before* any
 Check `tesmioloader.log` to confirm. You are looking for lines like:
 
 ```
-railspeed  concrete rail   (stock 150) -> 230 km/h
+railspeed  concrete rail   (stock 150) -> 330 km/h
 railspeed  5 of 6 limits patched
 ```
 
@@ -56,7 +56,7 @@ To uninstall, delete the two files. Nothing is written to your save — the game
 enabled = 1
 
 ; concrete rail + every bridge and tunnel tier, in km/h
-speed = 230
+speed = 330
 
 ; optional per-tier overrides; a key set here always wins over `speed`
 speed_concrete =
@@ -89,7 +89,7 @@ Every limit is returned by a rip-relative load of a pooled float constant:
 F3 0F 10 05 <disp32>        movss xmm0, [rip+disp32]
 ```
 
-Those constants cannot simply be edited. MSVC pools identical float literals, so the single `.rdata` slot holding `150.0f` is shared with roughly 190 unrelated call sites — gear ratios, camera zoom, UI geometry. Writing `230` over it would corrupt all of them.
+Those constants cannot simply be edited. MSVC pools identical float literals, so the single `.rdata` slot holding `150.0f` is shared with roughly 190 unrelated call sites — gear ratios, camera zoom, UI geometry. Writing `330` over it would corrupt all of them.
 
 So the plugin never touches the constants. It allocates its own floats near the executable and rewrites only the **4-byte displacement** of each load, so the same instruction reads a different number. Nothing else in the process can observe the change. In TesmioLoader's terms this is technique 3 — a data reference rewrite, no trampoline, no stolen bytes, nothing to unwind.
 
