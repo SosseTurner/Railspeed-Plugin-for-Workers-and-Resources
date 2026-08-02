@@ -75,9 +75,9 @@ Save the file as **UTF-8 without a BOM**. PowerShell's `-Encoding UTF8` writes a
 
 ## Things worth knowing
 
-**A locomotive still obeys its own top speed.** The cap a train actually runs at is `min(locomotive, track)`, so raising the track limit to 230 does nothing until the locomotive's `$ENGINE_SPEED` clears it too. Wagons were tested and do not appear to constrain the train — only the locomotive needs raising.
+**A locomotive still obeys its own top speed.** The cap a train actually runs at is `min(locomotive, track)`, so raising the track limit to 330 does nothing until the locomotive's `$ENGINE_SPEED` clears it too. Wagons were tested and do not appear to constrain the train — only the locomotive needs raising.
 
-**Trains brake harder from higher speeds.** That is the expected consequence, not a fault: they still slow and stop normally, and no junction speed limit was observed in testing. Pushing the figure far past 230 is worth watching at a busy junction once, but nothing here is known to break.
+**Trains brake harder from higher speeds.** That is the expected consequence, not a fault: they still slow and stop normally, and no junction speed limit was observed in testing. Pushing the figure far past 330 is worth watching at a busy junction once, but nothing here is known to break.
 
 ---
 
